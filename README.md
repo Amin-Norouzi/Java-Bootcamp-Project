@@ -5,7 +5,7 @@
 <br />
 <div align="center">
 
-![Demo diagram](https://github.com/Amin-Norouzi/Java-Bootcamp-Project/blob/master/assets/Diagram.drawio.png)
+![Demo diagram](https://github.com/Amin-Norouzi/Java-Bootcamp-Project/blob/master/assets/Diagram.drawio.jpg)
 
 <h3 align="center">Java Bootcamp Project</h3>
 
@@ -74,7 +74,7 @@ _To test the project easily, you can download these two files to use endpoints a
 
 _Follow the instruction below to run the program on your device._
 
-1. Clone the repo
+1. Clone the repo.
    ```sh
    git clone https://github.com/Amin-Norouzi/Java-Bootcamp-Project.git
    ```
@@ -83,7 +83,7 @@ _Follow the instruction below to run the program on your device._
    file.
 3. First of all, run eureka-server.
 4. Then run all other services.
-5. To use available endpoits, you can
+5. To use available endpoints, you can
    download [Postman Collections](https://github.com/Amin-Norouzi/Java-Bootcamp-Project/blob/master/assets/Postman-Collections.zip)
    .
 
