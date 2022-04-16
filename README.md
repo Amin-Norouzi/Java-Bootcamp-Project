@@ -33,7 +33,7 @@
 Available services: ⚙
 
 - Customer service: Create, edit, trace, and delete customers.
-- Account serivce: Manage, create, and update accounts.
+- Account service: Manage, create, and update accounts.
 - Transaction service: Create or get transactions.
 - Loan service: Create, pay, calculate, and get loans.
 
@@ -84,8 +84,7 @@ _Follow the instruction below to run the program on your device._
 3. First of all, run eureka-server.
 4. Then run all other services.
 5. To use available endpoints, you can
-   download [Postman Collections](https://github.com/Amin-Norouzi/Java-Bootcamp-Project/blob/master/assets/Postman-Collections.zip)
-   .
+   download [Postman Collections](https://github.com/Amin-Norouzi/Java-Bootcamp-Project/blob/master/assets/Postman-Collections.zip).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -93,8 +92,7 @@ _Follow the instruction below to run the program on your device._
 
 ## Contact
 
-Amin Norouzi - [Twitter](https://twitter.com/RealAminNorouzi) - [Insgatram](https://www.instagram.com/realaminnorouzi/)
-- [Email](mailto:realaminnorouzi@gmail.com) - [Linkedin](https://www.linkedin.com/in/amin-norouzi/)
+Amin Norouzi - [Twitter](https://twitter.com/RealAminNorouzi) - [Insgatram](https://www.instagram.com/realaminnorouzi/) - [Email](mailto:realaminnorouzi@gmail.com) - [Linkedin](https://www.linkedin.com/in/amin-norouzi/)
 
 Project
 Link: [https://github.com/Amin-Norouzi/Java-Bootcamp-Project](https://github.com/Amin-Norouzi/Java-Bootcamp-Project)
