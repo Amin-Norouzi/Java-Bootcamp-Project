@@ -1,0 +1,270 @@
+{
+  "info": {
+    "_postman_id": "6e39548b-b5d7-4fd5-a853-3a67da033562",
+    "name": "Customer",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Search with filter",
+      "item": [
+        {
+          "name": "Get customers by name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8091/api/v1/customers?search=fullName:'amin*'",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8091",
+              "path": [
+                "api",
+                "v1",
+                "customers"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "fullName:'amin*'"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get customers by name & status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8091/api/v1/customers?search=fullName:'test*' AND status:ACTIVE",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8091",
+              "path": [
+                "api",
+                "v1",
+                "customers"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "fullName:'test*' AND status:ACTIVE"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get customers by createdAt or birthDate",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8091/api/v1/customers?search=createdAt:2020-04-16 OR birthDate:2000-01-01",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8091",
+              "path": [
+                "api",
+                "v1",
+                "customers"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "createdAt:2020-04-16 OR birthDate:2000-01-01"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get customers by type",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8091/api/v1/customers?search=type:COMPANY",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8091",
+              "path": [
+                "api",
+                "v1",
+                "customers"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "type:COMPANY"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Get all customers",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8091/api/v1/customers",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8091",
+          "path": [
+            "api",
+            "v1",
+            "customers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create customer",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"fullName\": \"test name\",\r\n    \"nationalCode\": \"0123456789\",\r\n    \"phoneNumber\": \"0123456789\",\r\n    \"type\": \"INDIVIDUAL\",\r\n    \"birthDate\": \"2000-01-01\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8091/api/v1/customers",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8091",
+          "path": [
+            "api",
+            "v1",
+            "customers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete customer",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8091/api/v1/customers/delete/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8091",
+          "path": [
+            "api",
+            "v1",
+            "customers",
+            "delete",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get customer by id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8091/api/v1/customers/11",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8091",
+          "path": [
+            "api",
+            "v1",
+            "customers",
+            "11"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Change customer status",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8091/api/v1/customers/status/1?status=active",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8091",
+          "path": [
+            "api",
+            "v1",
+            "customers",
+            "status",
+            "1"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "active"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get accounts by customer id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8091/api/v1/customers/accounts/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8091",
+          "path": [
+            "api",
+            "v1",
+            "customers",
+            "accounts",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

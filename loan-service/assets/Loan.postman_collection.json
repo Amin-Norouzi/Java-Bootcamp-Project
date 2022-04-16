@@ -1,0 +1,150 @@
+{
+  "info": {
+    "_postman_id": "dd42b8fd-273e-4c01-bc8a-2368efad2f66",
+    "name": "Loan",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create loan",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"amount\": 10000000,\r\n    \"totalCount\": 12,\r\n    \"rate\": \"FOUR\",\r\n    \"type\": \"MORTGAGE\",\r\n    \"accountId\": 4\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8094/api/v1/loans",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8094",
+          "path": [
+            "api",
+            "v1",
+            "loans"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Calculate",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8094/api/v1/loans/calculate?amount=10000000&count=12&rate=four",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8094",
+          "path": [
+            "api",
+            "v1",
+            "loans",
+            "calculate"
+          ],
+          "query": [
+            {
+              "key": "amount",
+              "value": "10000000"
+            },
+            {
+              "key": "count",
+              "value": "12"
+            },
+            {
+              "key": "rate",
+              "value": "four"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get all loans",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8094/api/v1/loans",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8094",
+          "path": [
+            "api",
+            "v1",
+            "loans"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get loans by account id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8094/api/v1/loans/4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8094",
+          "path": [
+            "api",
+            "v1",
+            "loans",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Pay",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8094/api/v1/loans/pay?accountId=15&loanId=2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8094",
+          "path": [
+            "api",
+            "v1",
+            "loans",
+            "pay"
+          ],
+          "query": [
+            {
+              "key": "accountId",
+              "value": "15"
+            },
+            {
+              "key": "loanId",
+              "value": "2"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

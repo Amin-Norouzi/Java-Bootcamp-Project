@@ -1,0 +1,247 @@
+{
+  "info": {
+    "_postman_id": "e802b146-5ba6-41d4-adab-b99e828587de",
+    "name": "Account",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get all accounts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8092/api/v1/accounts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8092",
+          "path": [
+            "api",
+            "v1",
+            "accounts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create account",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\r\n{\r\n    \"customerIds\": [\r\n        1,\r\n        11\r\n    ],\r\n    \"type\": \"SAVING\",\r\n    \"currency\": \"IRR\",\r\n    \"balance\": 10000\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8092/api/v1/accounts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8092",
+          "path": [
+            "api",
+            "v1",
+            "accounts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get customers by account id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8092/api/v1/accounts/customers/7",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8092",
+          "path": [
+            "api",
+            "v1",
+            "accounts",
+            "customers",
+            "7"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Change account status",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8092/api/v1/accounts/status/4?status=open",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8092",
+          "path": [
+            "api",
+            "v1",
+            "accounts",
+            "status",
+            "4"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "open"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Deposit",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8092/api/v1/accounts/deposit?id=4&amount=2000&note=test",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8092",
+          "path": [
+            "api",
+            "v1",
+            "accounts",
+            "deposit"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "4"
+            },
+            {
+              "key": "amount",
+              "value": "2000"
+            },
+            {
+              "key": "note",
+              "value": "test"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Withdraw",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8092/api/v1/accounts/withdraw?id=4&amount=5000&note=test",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8092",
+          "path": [
+            "api",
+            "v1",
+            "accounts",
+            "withdraw"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "4"
+            },
+            {
+              "key": "amount",
+              "value": "5000"
+            },
+            {
+              "key": "note",
+              "value": "test"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Transfer",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8092/api/v1/accounts/transfer?senderId=4&receiverId=2&amount=5000&note=test",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8092",
+          "path": [
+            "api",
+            "v1",
+            "accounts",
+            "transfer"
+          ],
+          "query": [
+            {
+              "key": "senderId",
+              "value": "4"
+            },
+            {
+              "key": "receiverId",
+              "value": "2"
+            },
+            {
+              "key": "amount",
+              "value": "5000"
+            },
+            {
+              "key": "note",
+              "value": "test"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Show account balance",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8092/api/v1/accounts/balance/4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8092",
+          "path": [
+            "api",
+            "v1",
+            "accounts",
+            "balance",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
